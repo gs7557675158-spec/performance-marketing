@@ -169,7 +169,7 @@ svg{display:block}
 .proof dt small{font-size:.5em;letter-spacing:.01em}
 .proof dd{margin-top:.5rem;color:var(--muted);font-size:.92rem;line-height:1.35;max-width:22ch}
 @media(min-width:760px){
-  .proof{grid-template-columns:repeat(4,1fr)}
+  .proof{grid-template-columns:repeat(5,1fr)}
   .proof>div{border-bottom:0;padding-left:1.4rem;border-left:1px solid var(--line2)}
   .proof>div:first-child{padding-left:0;border-left:0}
 }
