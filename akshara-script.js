@@ -364,7 +364,7 @@ $$('#sk li').forEach(li => li.addEventListener('click', () => { $$('#sk li.sel')
    ============================================================ */
 $$('[data-whatsapp]').forEach(a => {
   if (!CONFIG.phone) { a.addEventListener('click', e => { e.preventDefault(); $('#contact').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' }); }); return; }
-  a.href = `https://wa.me/91${CONFIG.phone}?text=${encodeURIComponent("Hi Yogesh, I'd like to talk about performance marketing.")}`;
+  a.href = `https://wa.me/91${CONFIG.phone}?text=${encodeURIComponent("Hi Akshara, I'd like to talk about brand and social strategy.")}`;
   a.target = '_blank';
   a.rel = 'noopener';
 });
