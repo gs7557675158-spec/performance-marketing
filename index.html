@@ -56,6 +56,13 @@ h2{font-size:clamp(2rem,5vw,3.4rem);font-weight:800;margin-bottom:14px}
 .team{background:var(--mint);border-block:2px solid var(--ink)}
 .av{width:76px;height:76px;border-radius:50%;background:var(--ink);color:var(--sun);display:grid;place-items:center;font:800 1.5rem 'Bricolage Grotesque';margin-bottom:14px}
 form{display:grid;gap:14px;max-width:560px}label{display:grid;gap:6px;font-weight:700}
+.cwrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px;align-items:start}
+.askcard{background:#fff6d9;border:2px solid var(--ink);border-radius:24px;padding:26px;margin-top:28px}
+.askcard h3{font-size:1.3rem;margin-bottom:8px}.askcard p{color:#4a4866;margin-bottom:18px}
+.frow{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.frow input,.frow select{min-width:0}
+.cwrap form{max-width:none}
+@media(max-width:760px){.cwrap,.frow{grid-template-columns:1fr}}
 input,textarea,select{font:inherit;padding:14px;border:2px solid var(--ink);border-radius:12px;width:100%}
 dialog{border:2px solid var(--ink);border-radius:20px;padding:30px;max-width:420px;margin:auto}
 footer{background:var(--sun);border-top:2px solid var(--ink);padding:48px 0 32px}
@@ -191,11 +198,13 @@ nav ul{position:absolute;top:100%;left:0;right:0;background:var(--ink);flex-dire
 <div class="box"><img class="pf" src="home-art/gaurav-badge-new.jpg" width="760" height="760" loading="lazy" alt="Gaurav Sani, Performance Marketer"><h3 class="sr">Gaurav Sani</h3><b class="sr">Performance Marketer</b><p>Runs paid campaigns across Meta and Google, and builds the websites behind them.</p><a class="btn pbtn" href="gaurav.html" aria-label="View Gaurav's portfolio">View portfolio <span>→</span></a></div>
 </div></div></section>
 
-<section id="contact"><div class="wrap"><h2>Ready to <em>aim higher?</em></h2><p class="lead">Tell us about your project. We reply within one working day.</p>
+<section id="contact"><div class="wrap"><div class="cwrap">
+<div><h2>Ready to <em>aim higher?</em></h2><p class="lead">Tell us about your project. We reply within one working day.</p>
+<div class="askcard"><span class="av">AS</span><h3>Not sure where to start?</h3><p>Talk to Akshara. She will help you work out what you need, and bring in the complete team if your project calls for it.</p><a class="btn" style="background:var(--sun)" href="akshara.html">Talk to Akshara</a></div></div>
 <form action="mailto:hello@theperformancemarketer.in" method="post" enctype="text/plain">
-<label>Name<input name="name" required></label><label>Email<input type="email" name="email" required></label>
-<label>What do you need?<select name="need"><option>Performance marketing</option><option>Brand and social strategy</option><option>Full growth team</option></select></label>
-<label>Project details<textarea name="details" rows="4"></textarea></label><button class="btn" type="submit">Send request</button></form></div></section>
+<div class="frow"><label>Name<input name="name" placeholder="Your name" required></label><label>Phone number<input type="tel" name="phone" placeholder="+91 98765 43210"></label></div>
+<div class="frow"><label>Email<input type="email" name="email" placeholder="name@company.com" required></label><label>What do you need?<select name="need"><option>Performance marketing</option><option>Brand and social strategy</option><option>SEO and website</option><option>Full growth team</option><option>Not sure yet</option></select></label></div>
+<label>Project details<textarea name="details" rows="4" placeholder="Tell us your goal, budget range and timeline"></textarea></label><button class="btn" type="submit">Send request</button></form></div></div></section>
 
 <dialog id="nl"><h3 style="margin-bottom:10px">Get growth tips</h3><form method="dialog"><label>Email<input type="email" required></label><button class="btn">Subscribe</button></form></dialog>
 
