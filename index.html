@@ -63,15 +63,21 @@ footer p{max-width:720px}footer .big{font:800 1.8rem 'Bricolage Grotesque';margi
 @media(max-width:760px){.hero .wrap{grid-template-columns:1fr}nav ul li:not(:last-child){display:none}section{padding:60px 0}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
 .tall{min-height:300px;position:relative;overflow:visible;margin-bottom:140px}.tall h3{font-size:1.6rem}.tall svg{position:absolute;left:50%;bottom:-230px;width:190px;transform:translateX(-50%)}
-.winwrap{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}.trophies{width:100%;max-width:420px;justify-self:center}.wincols{margin-top:32px}.wincols b{display:block}.wincols p{color:#4a4866}
+.statswrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center}
+.stattiles{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.stattiles div{border-radius:22px;padding:22px 20px;font-weight:700;font-size:.95rem;min-width:0}
+.stattiles b{display:block;font:800 2.6rem 'Bricolage Grotesque';margin-bottom:4px}
+.stattiles .t-sun{background:var(--sun)}
+.stattiles .t-ink{background:var(--ink);color:var(--w)}.stattiles .t-ink b{color:var(--sun)}
+.stattiles .t-pink{background:var(--pink)}
+.stattiles .t-lav{background:#e8e6fb}
 .fgrid{display:grid;grid-template-columns:auto 1fr 1.2fr;gap:32px;align-items:center;margin-bottom:28px}.fcard{background:var(--sun);border:3px solid var(--ink);border-radius:18px;width:150px;padding:14px 10px 0;position:relative;background:#fff;box-shadow:5px 5px 0 var(--ink)}.fcard .mas{width:100%;display:block}.hi{position:absolute;top:-14px;right:-18px;background:var(--pink);border:2px solid var(--ink);border-radius:50%;padding:10px 8px;font:800 .85rem 'Bricolage Grotesque';transform:rotate(10deg)}
 .fmsg{font-size:1.3rem;font-weight:500}.flinks{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}.flinks a{font:800 1.1rem 'Bricolage Grotesque';text-decoration:none}
-@media(max-width:760px){.winwrap,.fgrid{grid-template-columns:1fr}}
+@media(max-width:760px){.statswrap,.fgrid{grid-template-columns:1fr}.stattiles b{font-size:2.2rem}}
 @keyframes up{from{opacity:0;translate:0 34px}}@keyframes bob{50%{translate:0 -12px}}@keyframes sway{50%{rotate:3deg}}@keyframes wig{25%{rotate:-4deg}75%{rotate:4deg}}
 .hero h1{animation:up .8s .1s both}.hero p{animation:up .8s .3s both}.hero .btn{animation:up .8s .5s both}.art svg{animation:bob 4s 1.6s ease-in-out infinite}
 .js .rv{opacity:0;translate:0 38px;transition:opacity .7s ease,translate .7s cubic-bezier(.2,.8,.2,1)}.js .rv.in{opacity:1;translate:none}
 .tall svg{animation:bob 3.4s ease-in-out infinite}.tall:nth-child(2) svg{animation-delay:-1.1s}.tall:nth-child(3) svg{animation-delay:-2.2s}.tall:hover svg{animation:wig .6s ease-in-out infinite}
-.trophies g{transform-box:fill-box;transform-origin:50% 100%}.trophies g:nth-of-type(odd){animation:sway 3s ease-in-out infinite}.trophies g:nth-of-type(even){animation:sway 3s -1.5s ease-in-out infinite reverse}
 .case{transition:translate .25s,box-shadow .25s}.case:hover{translate:-3px -6px;box-shadow:10px 10px 0 var(--ink)}.box{transition:box-shadow .25s}.three>.box:hover{box-shadow:6px 6px 0 var(--ink)}
 .score div{transition:background .25s,translate .25s}.score div:hover{background:#2a2750;translate:0 -6px}h2 em:hover{animation:wig .5s}.av{transition:rotate .4s}.box:hover .av{rotate:360deg}.hi{animation:sway 2s ease-in-out infinite}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}.js .rv{opacity:1;translate:none}}
@@ -141,7 +147,7 @@ html{scroll-padding-top:64px;-webkit-text-size-adjust:100%}.burger{display:none;
 nav ul{position:absolute;top:100%;left:0;right:0;background:var(--ink);flex-direction:column;align-items:flex-start;padding:8px 24px 22px;gap:16px;display:none;border-top:1px solid rgba(255,255,255,.15)}nav.open ul{display:flex}nav ul li:not(:last-child){display:list-item}
 .hero{padding-top:48px}.hero p{font-size:1.1rem}.score div{padding:18px}.score b{font-size:2.4rem}.workgrid .rail{margin:0 -24px;padding:6px 24px 28px}
 .tall{margin-bottom:160px}.cb{font-size:.82rem;padding:8px 10px;border-radius:14px}.cb.a{width:46%;bottom:-30px}.cb.a.l{width:48%}.cb.b{width:42%;bottom:-160px}.cb.c{width:36%;bottom:-80px}.cb.c.w{width:48%;bottom:-120px;font-size:.8rem}
-.rb{font-size:.9rem}.wincols{gap:16px}.fmsg .fb{font-size:1rem}.fgrid{gap:28px}}
+.rb{font-size:.9rem}.stattiles{gap:12px}.fmsg .fb{font-size:1rem}.fgrid{gap:28px}}
 .tapewrap{overflow:hidden;padding:26px 0 40px}.tape{background:var(--pink);border-block:2px solid var(--ink);overflow:hidden;white-space:nowrap;rotate:-1.3deg;width:104%;margin-left:-2%;box-shadow:0 5px 0 var(--ink)}
 .tape>div{display:inline-block;padding:12px 0;animation:slide 30s linear infinite reverse;font:800 1.2rem 'Bricolage Grotesque',sans-serif;color:var(--ink)}.tape span{margin:0 22px}
 .rail::-webkit-scrollbar{height:14px}.rail::-webkit-scrollbar-track{background:#fff;border:2px solid var(--ink);border-radius:999px;margin:0 24px}.rail::-webkit-scrollbar-thumb{background:var(--pink);border:2px solid var(--ink);border-radius:999px}
@@ -176,9 +182,8 @@ nav ul{position:absolute;top:100%;left:0;right:0;background:var(--ink);flex-dire
 <p class="lead">Real figures from 15+ years of performance marketing.</p>
 <div class="rwrap"><div class="score"><div class="emit"><b>5x</b>average ROAS</div><div><b>15+</b>years in the industry</div><div><b>250+</b>brands worked with</div><div><b>5+</b>countries</div></div><div class="rchar"><img class="rimg" src="home-art/money-guy.webp" width="520" height="780" loading="lazy" alt="Cartoon character crouching with coins"><i class="coin c1">₹</i><i class="coin c2">₹</i><i class="coin c3">₹</i><span class="rb">Paisa hi paisa hoga! 💸</span></div></div></div></section>
 
-<section id="wins"><div class="wrap winwrap"><div><h2>Not bad for three people, <em>eh?</em></h2><p class="lead">Swap these columns for your real awards and recognitions.</p></div>
-<svg class="trophies" viewBox="0 0 360 260" aria-hidden="true"><path d="M20 250a160 160 0 0 1 320 0z" fill="#ffd23f"/><g transform="translate(70 40) rotate(-14)"><rect width="70" height="190" rx="35" fill="#14122b"/><rect x="10" y="130" width="50" height="40" rx="8" fill="#fff"/><text x="35" y="156" text-anchor="middle" font-family="Bricolage Grotesque,sans-serif" font-weight="800" font-size="13" fill="#14122b">WIN</text></g><g transform="translate(150 20) rotate(0)"><rect width="70" height="190" rx="35" fill="#14122b"/><rect x="10" y="130" width="50" height="40" rx="8" fill="#ffd23f"/><text x="35" y="156" text-anchor="middle" font-family="Bricolage Grotesque,sans-serif" font-weight="800" font-size="13" fill="#14122b">WIN</text></g><g transform="translate(230 44) rotate(14)"><rect width="70" height="190" rx="35" fill="#14122b"/><rect x="10" y="130" width="50" height="40" rx="8" fill="#ff5c8a"/><text x="35" y="156" text-anchor="middle" font-family="Bricolage Grotesque,sans-serif" font-weight="800" font-size="13" fill="#14122b">WIN</text></g></svg></div>
-<div class="wrap"><div class="three wincols"><div><b>Award name, Year</b><p>Category<br>Brand name</p></div><div><b>Award name, Year</b><p>Category<br>Brand name</p></div><div><b>Award name, Year</b><p>Category<br>Brand name</p></div><div><b>Award name, Year</b><p>Category<br>Brand name</p></div></div></div></section><section class="team" id="team"><div class="wrap"><h2>Meet the <em>experts</em></h2>
+<section id="wins"><div class="wrap statswrap"><div><h2>Only three of us, and we're <em>still counting.</em></h2><p class="lead">270+ clients, 10+ industries, and at least 3 years of hands-on experience each.</p></div>
+<div class="stattiles"><div class="t-sun"><b>270+</b>clients</div><div class="t-ink"><b>10+</b>industries</div><div class="t-pink"><b>3+</b>minimum years of experience, each of us</div><div class="t-lav"><b>3</b>markets: India, USA, UAE</div></div></div></section><section class="team" id="team"><div class="wrap"><h2>Meet the <em>experts</em></h2>
 <p class="lead">Three specialists, three disciplines. You talk to them directly.</p>
 <div class="three">
 <div class="box"><img class="pf" src="home-art/yogesh-badge.jpg" width="760" height="760" loading="lazy" alt="Yogesh Sehgal, Performance Marketer"><h3 class="sr">Yogesh Sehgal</h3><b class="sr">Performance Marketer</b><p>Plans and runs Meta and Google Ads, adjusting spend to what the data supports.</p><a class="btn pbtn" href="yogesh.html" aria-label="View Yogesh's portfolio">View portfolio <span>→</span></a></div>
@@ -200,14 +205,14 @@ nav ul{position:absolute;top:100%;left:0;right:0;background:var(--ink);flex-dire
 <script>
 document.documentElement.classList.add('js');
 (function(){var r=matchMedia('(prefers-reduced-motion:reduce)').matches;
-var els=document.querySelectorAll('h2,.lead,.gab,.rchar,.case,.box:not(.tall),.tall,.score div,.wincols div,.trophies,.fgrid,form');
+var els=document.querySelectorAll('h2,.lead,.gab,.rchar,.case,.box:not(.tall),.tall,.score div,.stattiles div,.fgrid,form');
 els.forEach(function(e){e.classList.add('rv');var i=[].indexOf.call(e.parentNode.children,e);e.style.transitionDelay=Math.min(i,6)*90+'ms'});
 var io=new IntersectionObserver(function(a){a.forEach(function(x){if(!x.isIntersecting)return;x.target.classList.add('in');io.unobserve(x.target);
-var b=x.target.querySelector&&x.target.querySelector('b');if(b&&x.target.closest('.score'))count(b)})},{threshold:.15});
+var b=x.target.querySelector&&x.target.querySelector('b');if(b&&(x.target.closest('.score')||x.target.closest('.stattiles')))count(b)})},{threshold:.15});
 els.forEach(function(e){io.observe(e)});
 function count(b){var t=b.dataset.v,n=parseInt(t),suf=t.replace(/^\d+/,''),s=null;b.classList.remove('pop');
 function f(ts){s=s||ts;var p=Math.min((ts-s)/2000,1);b.textContent=Math.round(n*(1-Math.pow(1-p,4)))+suf;if(p<1)requestAnimationFrame(f);else{void b.offsetWidth;b.classList.add('pop')}}requestAnimationFrame(f)}
-document.querySelectorAll('.score div').forEach(function(d){var b=d.querySelector('b');b.dataset.v=b.textContent;b.textContent='0'+b.textContent.replace(/^\d+/,'');d.addEventListener('mouseenter',function(){count(b)})});
+document.querySelectorAll('.score div,.stattiles div').forEach(function(d){var b=d.querySelector('b');b.dataset.v=b.textContent;b.textContent='0'+b.textContent.replace(/^\d+/,'');d.addEventListener('mouseenter',function(){count(b)})});
 })();
 </script>
 <script>(function(){var n=document.querySelector('nav'),b=n&&n.querySelector('.burger');if(!b)return;b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});n.querySelectorAll('ul a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');b.setAttribute('aria-expanded','false')})})})();</script></body></html>
