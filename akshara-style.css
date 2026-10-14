@@ -353,6 +353,9 @@ svg{display:block}
 .agencies h3{font-size:1rem;font-weight:600}
 .agencies p{color:var(--muted);font-size:.95rem;margin-top:.2rem;max-width:44ch}
 @media(min-width:760px){.agencies{grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:2rem}}
+.logowall{display:grid;grid-template-columns:repeat(auto-fill,minmax(7.5rem,1fr));gap:.9rem;margin-top:1.6rem}
+.logowall div{background:#fff;border:1px solid var(--line);border-radius:.9rem;aspect-ratio:1;display:grid;place-items:center;padding:.9rem}
+.logowall img{max-width:100%;max-height:100%;object-fit:contain}
 
 /* ============================================================
    APPROACH
