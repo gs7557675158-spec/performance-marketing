@@ -19,35 +19,166 @@ const CASES = [
     strategy:'Build tailored brand and social media roadmaps aligned to client goals, backed by market research, competitor analysis and brand audits.',
     execution:'Lead a cross-functional team of designers, content creators and performance marketers from onboarding through delivery, keeping brand presence consistent across every platform and resolving client challenges as they come up.',
     tags:['Brand Strategy','Team Leadership','Client Management'],
-    metrics:[{label:'Markets served', value:'India, USA, UAE'},{label:'Client industries', value:'4 verticals'}],
-    images:['akshara-logos/airoright.jpg','akshara-logos/baithak-the-craft-kitchen.jpg','akshara-logos/brand-logo-25.jpg','akshara-logos/bunkoos.jpg','akshara-logos/byd-shine-your-dine.jpg','akshara-logos/cuetmock.jpg','akshara-logos/dlf-privana.jpg','akshara-logos/dont-hire.jpg','akshara-logos/dr-suniti-goel.jpg','akshara-logos/elan-building-the-future.jpg','akshara-logos/greenchef.jpg','akshara-logos/hunting-hawks.jpg','akshara-logos/huntio-organics.jpg','akshara-logos/ielts-consulting-guru.jpg','akshara-logos/kamat-group.jpg','akshara-logos/karims.jpg','akshara-logos/meritus-ai.jpg','akshara-logos/mgnl.jpg','akshara-logos/midson-group.jpg','akshara-logos/modern-early-years-deepali.png','akshara-logos/modern-school-ecncr-delhi.png','akshara-logos/modern-school-sector-85-faridabad.png','akshara-logos/nutro-yumm.jpg','akshara-logos/peggy-icecream.jpg','akshara-logos/prabhat-realty.jpg','akshara-logos/realistic-realtors.jpg','akshara-logos/rentit4me.jpg','akshara-logos/rita.jpg','akshara-logos/saransh-gupta.png','akshara-logos/succor.png','akshara-logos/tajurba.jpg','akshara-logos/tangenz.jpg','akshara-logos/tijus-academy.jpg','akshara-logos/tranquillitas.jpg','akshara-logos/tulip-monsella.jpg','akshara-logos/visio-world.jpg','akshara-logos/whiteland.png','akshara-logos/winning-mantra.jpg'] },
-  { id:'dme', mono:'DM', title:'Scaling engagement through content', industry:null,
-    agency:'Uniworld Studios', period:'Nov 2021 – May 2022', role:'Digital Marketing Executive',
-    platform:'LinkedIn, Instagram, Facebook, X and YouTube', objective:'Manage end-to-end digital strategy and brand communication for Indian and USA-based clients.',
-    strategy:'Build content calendars and short-form video content tailored to each audience, paired with Canva-designed creatives and decks.',
-    execution:'Owned day-to-day social handling, client delivery and reporting, tracking KPIs to guide the next cycle of content.',
-    tags:['Social Media','Content Strategy','Reporting'],
-    metrics:[{label:'Engagement lift (self-reported)', value:'30–40%'}], images:[] },
-  { id:'ga', mono:'GA', title:'500+ influencers, 20+ partnerships', industry:null,
-    agency:'Gamezop', period:'November 2020 – February 2020', role:'Growth Analyst',
-    platform:'Influencer marketing, regional outreach', objective:'Scale brand presence across Gujarat, Rajasthan, Haryana and Delhi through influencer partnerships.',
-    strategy:'Research and shortlist regional influencers, then track engagement, reach and relevance in a structured database.',
-    execution:'Closed 20+ partnerships, negotiated deliverables with influencers, and monitored reach, views and ROI across the campaign.',
-    tags:['Influencer Marketing','Regional Growth','Partnerships'],
-    metrics:[{label:'Influencers shortlisted', value:'500+'},{label:'Partnerships closed', value:'20+'},{label:'Regional reach lift (self-reported)', value:'20–30%'}], images:[] },
-  { id:'intern-dm', mono:'DM', title:'Foundations across SEO, SEM and content', industry:null,
-    agency:'Uniworld Studios', period:'May 2021 – October 2021', role:'Digital Marketing Intern',
-    platform:'SEO, SEM, social and content', objective:'Support campaigns and client projects across digital marketing disciplines.',
-    strategy:'Keyword research, on-page and off-page SEO, and content calendars for client accounts.',
-    execution:'Assisted ad campaigns, client communications and performance reporting while building a foundation across the full digital marketing stack.',
-    tags:['SEO','SEM','Client Projects'], metrics:[], images:[] },
+    metrics:[{label:'Markets served', value:'India, USA, UAE'},{label:'Client industries', value:'4 verticals'}], images:[] },
+  { id:'airoright', mono:'AR', title:'Airoright', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/airoright.jpg'] },
+  { id:'baithak', mono:'BT', title:'Baithak, The Craft Kitchen', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/baithak-the-craft-kitchen.jpg'] },
+  { id:'brandlogo25', mono:'BR', title:'Client brand', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/brand-logo-25.jpg'] },
+  { id:'bunkoos', mono:'BK', title:'Bunkoo\'s', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/bunkoos.jpg'] },
+  { id:'byd', mono:'BY', title:'BYD, Shine Your Dine', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/byd-shine-your-dine.jpg'] },
+  { id:'cuetmock', mono:'CM', title:'CUETMock', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/cuetmock.jpg'] },
+  { id:'dlfprivana', mono:'DP', title:'DLF Privana', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/dlf-privana.jpg'] },
+  { id:'donthire', mono:'DH', title:'Dont Hire', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/dont-hire.jpg'] },
+  { id:'drsunitigoel', mono:'SG', title:'Dr Suniti Goel', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/dr-suniti-goel.jpg'] },
+  { id:'elan2', mono:'EL', title:'Elan', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/elan-building-the-future.jpg'] },
+  { id:'greenchef', mono:'GC', title:'GreenChef', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/greenchef.jpg'] },
+  { id:'huntinghawks', mono:'HH', title:'Hunting Hawks', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/hunting-hawks.jpg'] },
+  { id:'huntioorganics', mono:'HO', title:'Huntio Organics', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/huntio-organics.jpg'] },
+  { id:'ieltsguru2', mono:'IG', title:'IELTS Consulting Guru', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/ielts-consulting-guru.jpg'] },
+  { id:'kamatgroup', mono:'KG', title:'Kamat Group', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/kamat-group.jpg'] },
+  { id:'karims', mono:'KM', title:'Karim\'s', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/karims.jpg'] },
+  { id:'meritusai', mono:'MA', title:'Meritus AI', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/meritus-ai.jpg'] },
+  { id:'mgnl', mono:'MG', title:'MGNL, Midson Group Nidhi Limited', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/mgnl.jpg'] },
+  { id:'midsongroup', mono:'MD', title:'Midson Group', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/midson-group.jpg'] },
+  { id:'nutroyumm', mono:'NY', title:'Nutro Yumm', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/nutro-yumm.jpg'] },
+  { id:'peggyicecream', mono:'PI', title:'Peggy Icecream', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/peggy-icecream.jpg'] },
+  { id:'prabhatrealty', mono:'PR', title:'Prabhat Realty', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/prabhat-realty.jpg'] },
+  { id:'realisticrealtors', mono:'RR', title:'Realistic Realtors', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/realistic-realtors.jpg'] },
+  { id:'rentit4me', mono:'R4', title:'Rentit4me', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/rentit4me.jpg'] },
+  { id:'rita2', mono:'RT', title:'Rita', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/rita.jpg'] },
+  { id:'saranshgupta', mono:'SG', title:'Saransh Gupta', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/saransh-gupta.png'] },
+  { id:'succor', mono:'SC', title:'Succor', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/succor.png'] },
+  { id:'tajurba', mono:'TJ', title:'Tajurba', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/tajurba.jpg'] },
+  { id:'tangenz2', mono:'TZ', title:'Tangenz', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/tangenz.jpg'] },
+  { id:'modernearlyyears', mono:'MY', title:'Modern Early Years, Deepali', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/modern-early-years-deepali.png'] },
+  { id:'modernschoolecncr', mono:'MS', title:'The Modern School, ECNCR Delhi', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/modern-school-ecncr-delhi.png'] },
+  { id:'modernschoolfaridabad', mono:'MF', title:'The Modern School, Sector 85 Faridabad', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/modern-school-sector-85-faridabad.png'] },
+  { id:'tijusacademy', mono:'TA', title:'Tiju\'s Academy', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/tijus-academy.jpg'] },
+  { id:'tranquillitas', mono:'TR', title:'Tranquillitas', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/tranquillitas.jpg'] },
+  { id:'tulipmonsella', mono:'TM', title:'Tulip Monsella', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/tulip-monsella.jpg'] },
+  { id:'visioworld', mono:'VW', title:'Visio World', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/visio-world.jpg'] },
+  { id:'whiteland', mono:'WL', title:'Whiteland', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/whiteland.png'] },
+  { id:'winningmantra', mono:'WM', title:'Winning Mantra', industry:null,
+    agency:null, period:null, role:null,
+    platform:null, objective:null, strategy:null, execution:null,
+    tags:[], metrics:[], images:['akshara-logos/winning-mantra.jpg'] },
   { id:'intern-ga', mono:'GA', title:'Regional influencer network, early career', industry:null,
     agency:'Gamezop', period:'August 2019 – October 2019', role:'Growth Analyst Intern',
     platform:'Influencer marketing, regional outreach', objective:'Strengthen brand reach and visibility across regional markets through influencer collaborations.',
     strategy:'Identify potential influencers and build an outreach database for partnerships.',
     execution:'Negotiated early collaborations and maintained relationships with regional influencers across four states.',
     tags:['Influencer Marketing','Outreach'], metrics:[], images:[] }
-].map(c => ({ ...c, metrics:c.metrics||[], images:c.images||[] }));
+].map(c => ({ ...c, tags:c.tags||[], metrics:c.metrics||[], images:c.images||[] }));
 
 /* ============================================================
    UTILITIES
@@ -245,13 +376,11 @@ CASES.forEach((c, i) => {
   const b = document.createElement('button');
   b.type = 'button'; b.className = 'file' + (c.feat ? ' file--feat' : ''); b.dataset.case = c.id;
   b.setAttribute('aria-haspopup', 'dialog');
-  const cover = c.images && c.images.length > 1
-    ? `<span class="file__logos">${c.images.map(src => `<img src="${src}" alt="" loading="lazy" decoding="async">`).join('')}</span>`
-    : c.images && c.images[0] ? `<img src="${c.images[0]}" alt="" loading="lazy" decoding="async">` : `<span class="file__mono" aria-hidden="true">${c.mono}</span>`;
+  const cover = c.images && c.images[0] ? `<img src="${c.images[0]}" alt="" loading="lazy" decoding="async">` : `<span class="file__mono" aria-hidden="true">${c.mono}</span>`;
   b.innerHTML = `<span class="file__cv">${cover}${c.feat ? '<span class="file__tag">Current role</span>' : ''}${c.intl ? '<span class="file__tag">International client</span>' : ''}</span>
     <span class="file__bd"><span class="file__t">${c.title}</span>
     ${c.sub ? `<span class="file__s">${c.sub}</span>` : ''}
-    <span class="file__m">${c.agency}<br>${c.period}</span>
+    ${c.agency || c.period ? `<span class="file__m">${c.agency || ''}${c.agency && c.period ? '<br>' : ''}${c.period || ''}</span>` : ''}
     <span class="chips">${c.tags.map(t => `<span class="chip">${t}</span>`).join('')}</span></span>
     <span class="file__plus" aria-hidden="true">${ic('i-plus')}</span>`;
   b.setAttribute('aria-label', `Open case file: ${c.title}`);
@@ -270,16 +399,16 @@ function render(i) {
   const mets = (c.metrics && c.metrics.length)
     ? `<div class="mets">${c.metrics.map(m => `<div class="met real"><span>${m.label}</span><b>${m.value}</b></div>`).join('')}</div>`
     : `<div class="mets"><div class="met"><span>Add a verified metric</span><b>–</b></div><div class="met"><span>Add a verified metric</span><b>–</b></div><div class="met"><span>Add a verified metric</span><b>–</b></div></div>`;
-  mBody.innerHTML = `<h3 id="mTitle">${c.title}</h3><p class="role">${c.role}, ${c.agency}. ${c.period}.</p>
+  const roleLine = (c.role || c.agency || c.period) ? `<p class="role">${[c.role, c.agency].filter(Boolean).join(', ')}${c.period ? '. ' + c.period + '.' : '.'}</p>` : '';
+  mBody.innerHTML = `<h3 id="mTitle">${c.title}</h3>${roleLine}
     <dl class="cs">
       <div><dt>Client and industry</dt><dd>${c.feat ? client : (c.sub ? c.title + ' (' + c.sub + ')' : c.title)}, ${ind}${c.intl ? '. International client.' : ''}</dd></div>
-      <div><dt>Platform</dt><dd>${c.platform}</dd></div>
-      <div><dt>Objective</dt><dd>${c.objective}</dd></div>
-      <div><dt>Strategy</dt><dd>${c.strategy}</dd></div>
-      <div><dt>Execution</dt><dd>${c.execution}</dd></div>
+      <div><dt>Platform</dt><dd>${c.platform ? c.platform : ph('Add platform')}</dd></div>
+      <div><dt>Objective</dt><dd>${c.objective ? c.objective : ph('Add objective')}</dd></div>
+      <div><dt>Strategy</dt><dd>${c.strategy ? c.strategy : ph('Add strategy')}</dd></div>
+      <div><dt>Execution</dt><dd>${c.execution ? c.execution : ph('Add execution')}</dd></div>
       <div><dt>Results</dt><dd class="res"><span>Detailed campaign metrics available on request.</span>${mets}</dd></div>
-    </dl>
-    ${c.images && c.images.length > 1 ? `<div class="mclients"><h4>Brands included</h4><div class="mclients__grid">${c.images.map(src => `<span><img src="${src}" alt="" loading="lazy"></span>`).join('')}</div></div>` : ''}`;
+    </dl>`;
   mBody.scrollTop = 0;
 }
 function openCase(id) {
