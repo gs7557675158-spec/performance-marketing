@@ -13,7 +13,7 @@ const CONFIG = {
    CASE FILES: role-by-role impact, drawn from verified resume content.
    ============================================================ */
 const CASES = [
-  { id:'current', feat:true, cardBrief:true, mono:'BM', title:'Brand strategy across three markets', sub:'Current role', company:null, industry:null,
+  { id:'current', feat:true, cardBrief:true, mono:'BM', title:'Airoright', sub:'Current role', company:null, industry:null,
     agency:'Uniworld Studios', period:'June 2022 – Present', role:'Brand Manager',
     platform:'Social, SEO, performance marketing and content', objective:'Support client growth across real estate, education, e-commerce and lifestyle brands in India, the USA and the UAE.',
     strategy:'Build tailored brand and social media roadmaps aligned to client goals, backed by market research, competitor analysis and brand audits.',
