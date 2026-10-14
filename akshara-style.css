@@ -251,6 +251,8 @@ svg{display:block}
 .file__cv img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .file__mono{font:800 clamp(5rem,12vw,8.5rem)/1 var(--f-display);font-stretch:62%;text-transform:uppercase;color:transparent;-webkit-text-stroke:1.5px var(--fg);transition:color .35s,-webkit-text-stroke-color .35s}
 .file--feat .file__cv{aspect-ratio:16/10}
+.file__logos{position:absolute;inset:0;display:grid;grid-template-columns:repeat(8,1fr);grid-auto-rows:1fr;gap:2px;background:#fff;padding:6px;overflow:hidden}
+.file__logos img{position:static;width:100%;height:100%;object-fit:contain;padding:3px;box-sizing:border-box}
 .file__tag{position:absolute;left:.9rem;top:.9rem;font-size:.8rem;padding:.25rem .65rem;border-radius:999px;background:var(--acc);color:var(--on-acc);font-weight:600}
 .file__bd{padding:1.15rem 1.15rem 1.3rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
 .file__t{font:800 clamp(1.7rem,3vw,2.2rem)/.96 var(--f-display);font-stretch:70%;letter-spacing:-.005em;padding-right:3rem}
@@ -297,6 +299,11 @@ svg{display:block}
 .met{border:1px dashed var(--line);padding:.8rem;min-height:5.2rem;display:flex;flex-direction:column;justify-content:space-between;font-size:.82rem;color:var(--muted)}
 .met b{font:800 1.9rem/1 var(--f-display);font-stretch:66%;color:var(--fg)}
 .met.real{border-style:solid;border-color:var(--acc)}
+.mclients{margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid var(--line)}
+.mclients h4{font-size:.88rem;color:var(--muted);font-weight:600;margin-bottom:.9rem}
+.mclients__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(5.5rem,1fr));gap:.6rem}
+.mclients__grid span{background:#fff;border:1px solid var(--line);border-radius:.6rem;aspect-ratio:1;display:grid;place-items:center;padding:.5rem}
+.mclients__grid img{max-width:100%;max-height:100%;object-fit:contain}
 .modal__ft{display:flex;justify-content:space-between;gap:1rem;padding:1rem var(--gut) calc(env(safe-area-inset-bottom,0px) + 1rem);border-top:1px solid var(--line)}
 .modal__ft button{padding:.7rem 0;font-weight:600;transition:color .2s}
 @media(hover:hover){.modal__ft button:hover{color:var(--acc-t)}}
@@ -353,9 +360,6 @@ svg{display:block}
 .agencies h3{font-size:1rem;font-weight:600}
 .agencies p{color:var(--muted);font-size:.95rem;margin-top:.2rem;max-width:44ch}
 @media(min-width:760px){.agencies{grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:2rem}}
-.logowall{display:grid;grid-template-columns:repeat(auto-fill,minmax(7.5rem,1fr));gap:.9rem;margin-top:1.6rem}
-.logowall div{background:#fff;border:1px solid var(--line);border-radius:.9rem;aspect-ratio:1;display:grid;place-items:center;padding:.9rem}
-.logowall img{max-width:100%;max-height:100%;object-fit:contain}
 
 /* ============================================================
    APPROACH

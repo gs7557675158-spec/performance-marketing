@@ -19,7 +19,8 @@ const CASES = [
     strategy:'Build tailored brand and social media roadmaps aligned to client goals, backed by market research, competitor analysis and brand audits.',
     execution:'Lead a cross-functional team of designers, content creators and performance marketers from onboarding through delivery, keeping brand presence consistent across every platform and resolving client challenges as they come up.',
     tags:['Brand Strategy','Team Leadership','Client Management'],
-    metrics:[{label:'Markets served', value:'India, USA, UAE'},{label:'Client industries', value:'4 verticals'}], images:[] },
+    metrics:[{label:'Markets served', value:'India, USA, UAE'},{label:'Client industries', value:'4 verticals'}],
+    images:['akshara-logos/airoright.jpg','akshara-logos/baithak-the-craft-kitchen.jpg','akshara-logos/brand-logo-25.jpg','akshara-logos/bunkoos.jpg','akshara-logos/byd-shine-your-dine.jpg','akshara-logos/cuetmock.jpg','akshara-logos/dlf-privana.jpg','akshara-logos/dont-hire.jpg','akshara-logos/dr-suniti-goel.jpg','akshara-logos/elan-building-the-future.jpg','akshara-logos/greenchef.jpg','akshara-logos/hunting-hawks.jpg','akshara-logos/huntio-organics.jpg','akshara-logos/ielts-consulting-guru.jpg','akshara-logos/kamat-group.jpg','akshara-logos/karims.jpg','akshara-logos/meritus-ai.jpg','akshara-logos/mgnl.jpg','akshara-logos/midson-group.jpg','akshara-logos/modern-early-years-deepali.png','akshara-logos/modern-school-ecncr-delhi.png','akshara-logos/modern-school-sector-85-faridabad.png','akshara-logos/nutro-yumm.jpg','akshara-logos/peggy-icecream.jpg','akshara-logos/prabhat-realty.jpg','akshara-logos/realistic-realtors.jpg','akshara-logos/rentit4me.jpg','akshara-logos/rita.jpg','akshara-logos/saransh-gupta.png','akshara-logos/succor.png','akshara-logos/tajurba.jpg','akshara-logos/tangenz.jpg','akshara-logos/tijus-academy.jpg','akshara-logos/tranquillitas.jpg','akshara-logos/tulip-monsella.jpg','akshara-logos/visio-world.jpg','akshara-logos/whiteland.png','akshara-logos/winning-mantra.jpg'] },
   { id:'dme', mono:'DM', title:'Scaling engagement through content', industry:null,
     agency:'Uniworld Studios', period:'Nov 2021 – May 2022', role:'Digital Marketing Executive',
     platform:'LinkedIn, Instagram, Facebook, X and YouTube', objective:'Manage end-to-end digital strategy and brand communication for Indian and USA-based clients.',
@@ -244,7 +245,9 @@ CASES.forEach((c, i) => {
   const b = document.createElement('button');
   b.type = 'button'; b.className = 'file' + (c.feat ? ' file--feat' : ''); b.dataset.case = c.id;
   b.setAttribute('aria-haspopup', 'dialog');
-  const cover = c.images && c.images[0] ? `<img src="${c.images[0]}" alt="" loading="lazy" decoding="async">` : `<span class="file__mono" aria-hidden="true">${c.mono}</span>`;
+  const cover = c.images && c.images.length > 1
+    ? `<span class="file__logos">${c.images.map(src => `<img src="${src}" alt="" loading="lazy" decoding="async">`).join('')}</span>`
+    : c.images && c.images[0] ? `<img src="${c.images[0]}" alt="" loading="lazy" decoding="async">` : `<span class="file__mono" aria-hidden="true">${c.mono}</span>`;
   b.innerHTML = `<span class="file__cv">${cover}${c.feat ? '<span class="file__tag">Current role</span>' : ''}${c.intl ? '<span class="file__tag">International client</span>' : ''}</span>
     <span class="file__bd"><span class="file__t">${c.title}</span>
     ${c.sub ? `<span class="file__s">${c.sub}</span>` : ''}
@@ -275,7 +278,8 @@ function render(i) {
       <div><dt>Strategy</dt><dd>${c.strategy}</dd></div>
       <div><dt>Execution</dt><dd>${c.execution}</dd></div>
       <div><dt>Results</dt><dd class="res"><span>Detailed campaign metrics available on request.</span>${mets}</dd></div>
-    </dl>`;
+    </dl>
+    ${c.images && c.images.length > 1 ? `<div class="mclients"><h4>Brands included</h4><div class="mclients__grid">${c.images.map(src => `<span><img src="${src}" alt="" loading="lazy"></span>`).join('')}</div></div>` : ''}`;
   mBody.scrollTop = 0;
 }
 function openCase(id) {
