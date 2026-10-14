@@ -13,7 +13,7 @@ const CONFIG = {
    CASE FILES: role-by-role impact, drawn from verified resume content.
    ============================================================ */
 const CASES = [
-  { id:'current', feat:true, mono:'BM', title:'Brand strategy across three markets', sub:'Current role', company:null, industry:null,
+  { id:'current', feat:true, cardBrief:true, mono:'BM', title:'Brand strategy across three markets', sub:'Current role', company:null, industry:null,
     agency:'Uniworld Studios', period:'June 2022 – Present', role:'Brand Manager',
     platform:'Social, SEO, performance marketing and content', objective:'Support client growth across real estate, education, e-commerce and lifestyle brands in India, the USA and the UAE.',
     strategy:'Build tailored brand and social media roadmaps aligned to client goals, backed by market research, competitor analysis and brand audits.',
@@ -211,10 +211,21 @@ function fit() {
     else el.style.fontSize = '';
   });
 }
-let fitT; addEventListener('resize', () => { cancelAnimationFrame(fitT); fitT = requestAnimationFrame(fit); });
+let fitT; const queueFit = () => { cancelAnimationFrame(fitT); fitT = requestAnimationFrame(fit); };
+addEventListener('resize', queueFit);
 fit();
-if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
 addEventListener('load', fit);
+if (document.fonts && document.fonts.check) {
+  let tries = 0;
+  const pollFit = () => {
+    tries++;
+    if (document.fonts.check('800 16px Archivo')) { fit(); return; }
+    if (tries < 40) setTimeout(pollFit, 100);
+  };
+  pollFit();
+} else {
+  [300, 800, 1600].forEach(ms => setTimeout(fit, ms));
+}
 
 /* Hero + contact posters: reveal when in view (hero immediately) */
 const reveal = el => el.classList.add('in');
@@ -375,9 +386,9 @@ CASES.forEach((c, i) => {
   const cover = c.images && c.images[0] ? `<img src="${c.images[0]}" alt="" loading="lazy" decoding="async">` : `<span class="file__mono" aria-hidden="true">${c.mono}</span>`;
   b.innerHTML = `<span class="file__cv">${cover}${c.feat ? '<span class="file__tag">Current role</span>' : ''}${c.intl ? '<span class="file__tag">International client</span>' : ''}</span>
     <span class="file__bd"><span class="file__t">${c.title}</span>
-    ${c.sub ? `<span class="file__s">${c.sub}</span>` : ''}
+    ${c.cardBrief ? '' : `${c.sub ? `<span class="file__s">${c.sub}</span>` : ''}
     ${c.agency || c.period ? `<span class="file__m">${c.agency || ''}${c.agency && c.period ? '<br>' : ''}${c.period || ''}</span>` : ''}
-    <span class="chips">${c.tags.map(t => `<span class="chip">${t}</span>`).join('')}</span></span>
+    <span class="chips">${c.tags.map(t => `<span class="chip">${t}</span>`).join('')}</span>`}</span>
     <span class="file__plus" aria-hidden="true">${ic('i-plus')}</span>`;
   b.setAttribute('aria-label', `Open case file: ${c.title}`);
   rail.append(b);
