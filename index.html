@@ -54,7 +54,8 @@ h2{font-size:clamp(2rem,5vw,3.4rem);font-weight:800;margin-bottom:14px}
 .score div{border:2px solid var(--sun);border-radius:20px;padding:24px}
 .score b{display:block;font:800 3rem 'Bricolage Grotesque';color:var(--sun)}
 .team{background:var(--mint);border-block:2px solid var(--ink)}
-.av{width:76px;height:76px;border-radius:50%;background:var(--ink);color:var(--sun);display:grid;place-items:center;font:800 1.5rem 'Bricolage Grotesque';margin-bottom:14px}
+.av{width:76px;height:76px;border-radius:50%;background:var(--ink);color:var(--sun);display:grid;place-items:center;font:800 1.5rem 'Bricolage Grotesque';margin-bottom:14px;overflow:hidden}
+.av img{width:100%;height:100%;object-fit:cover}
 form{display:grid;gap:14px;max-width:560px}label{display:grid;gap:6px;font-weight:700}
 .cwrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px}
 .ctext{display:flex;flex-direction:column}
@@ -202,7 +203,7 @@ nav ul{position:absolute;top:100%;left:0;right:0;background:var(--ink);flex-dire
 
 <section id="contact"><div class="wrap"><div class="cwrap">
 <div class="ctext"><h2>Ready to <em>aim higher?</em></h2><p class="lead">Tell us about your project. We reply within one working day.</p>
-<div class="askcard"><span class="av">AS</span><h3>Not sure where to start?</h3><p>Talk to Akshara. She will help you work out what you need, and bring in the complete team if your project calls for it.</p><a class="btn" style="background:var(--sun)" href="https://wa.me/919927602553?text=Hi%20Akshara%2C%20I%27m%20not%20sure%20where%20to%20start%20with%20my%20project." target="_blank" rel="noopener">Talk to Akshara</a></div></div>
+<div class="askcard"><span class="av"><img src="akshara-avatar.jpg" alt="Akshara Singh" loading="lazy"></span><h3>Not sure where to start?</h3><p>Talk to Akshara. She will help you work out what you need, and bring in the complete team if your project calls for it.</p><a class="btn" style="background:var(--sun)" href="https://wa.me/919927602553?text=Hi%20Akshara%2C%20I%27m%20not%20sure%20where%20to%20start%20with%20my%20project." target="_blank" rel="noopener">Talk to Akshara</a></div></div>
 <form action="mailto:hello@theperformancemarketer.in" method="post" enctype="text/plain">
 <div class="frow"><label>Name<input name="name" placeholder="Your name" required></label><label>Phone number<input type="tel" name="phone" placeholder="+91 98765 43210"></label></div>
 <div class="frow"><label>Email<input type="email" name="email" placeholder="name@company.com" required></label><label>What do you need?<select name="need"><option>Performance marketing</option><option>Brand and social strategy</option><option>SEO and website</option><option>Full growth team</option><option>Not sure yet</option></select></label></div>
