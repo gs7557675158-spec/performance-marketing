@@ -19,7 +19,7 @@ const CASES = [
     strategy:'Build tailored brand and social media roadmaps aligned to client goals, backed by market research, competitor analysis and brand audits.',
     execution:'Lead a cross-functional team of designers, content creators and performance marketers from onboarding through delivery, keeping brand presence consistent across every platform and resolving client challenges as they come up.',
     tags:['Brand Strategy','Team Leadership','Client Management'],
-    metrics:[{label:'Markets served', value:'India, USA, UAE'},{label:'Client industries', value:'4 verticals'}], images:[] },
+    metrics:[{label:'Markets served', value:'India, USA, UAE'},{label:'Client industries', value:'4 verticals'}], images:['akshara-logos/airoright.jpg'] },
   { id:'airoright', mono:'AR', title:'Airoright', industry:null,
     agency:null, period:null, role:null,
     platform:null, objective:null, strategy:null, execution:null,
