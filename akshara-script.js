@@ -168,12 +168,12 @@ const CASES = [
     agency:null, period:null, role:null,
     platform:null, objective:null, strategy:null, execution:null,
     tags:[], metrics:[], images:['akshara-logos/winning-mantra.jpg'] },
-  { id:'intern-ga', mono:'GA', title:'Regional influencer network, early career', industry:null,
-    agency:'Gamezop', period:'August 2019 – October 2019', role:'Growth Analyst Intern',
-    platform:'Influencer marketing, regional outreach', objective:'Strengthen brand reach and visibility across regional markets through influencer collaborations.',
-    strategy:'Identify potential influencers and build an outreach database for partnerships.',
-    execution:'Negotiated early collaborations and maintained relationships with regional influencers across four states.',
-    tags:['Influencer Marketing','Outreach'], metrics:[], images:[] }
+  { id:'personal-brands', mono:'PB', title:'Personal Branding for CEOs & Founders', industry:'CEOs and Founders across Real Estate, Education, E-commerce & Lifestyle',
+    agency:null, period:null, role:null,
+    platform:'LinkedIn, Instagram, YouTube', objective:'Build and strengthen personal brand presence, increase reach and visibility, and position founders as trusted leaders in their market.',
+    strategy:'Blend personal story, work, and life into the content, balancing authority with authenticity to create a relatable, leader-led brand voice.',
+    execution:'Market and competitor research, defining content pillars and founder journey, content planning and creation, publishing across platforms, and continuous analysis and reporting.',
+    tags:[], metrics:[{label:'Founder Brands Built', value:'2+'},{label:'Organic Impressions Generated', value:'500K+'}], images:[] }
 ].map(c => ({ ...c, tags:c.tags||[], metrics:c.metrics||[], images:c.images||[] }));
 
 /* ============================================================
