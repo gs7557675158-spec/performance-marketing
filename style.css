@@ -122,7 +122,7 @@ svg{display:block}
 .hero>.wrap{position:relative}
 
 .poster{font-family:var(--f-display);font-weight:800;font-stretch:64%;text-transform:uppercase;line-height:.86;letter-spacing:-.005em;font-size:clamp(2.6rem,9.5vw,9rem)}
-.poster .row{display:flex;justify-content:space-between;gap:.24em}
+.poster .row{display:flex;justify-content:flex-start;gap:.24em}
 .poster .ln{display:block;flex:none;width:fit-content;overflow:hidden;white-space:nowrap;padding-bottom:.03em}
 .poster .ln>span{display:block;transition:transform 1.05s var(--ease);transition-delay:calc(var(--d,0)*95ms + 120ms)}
 .js .poster:not(.in) .ln>span{transform:translateY(106%)}
