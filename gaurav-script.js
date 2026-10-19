@@ -166,10 +166,21 @@ function fit() {
     else el.style.fontSize = '';
   });
 }
-let fitT; addEventListener('resize', () => { cancelAnimationFrame(fitT); fitT = requestAnimationFrame(fit); });
+let fitT; const queueFit = () => { cancelAnimationFrame(fitT); fitT = requestAnimationFrame(fit); };
+addEventListener('resize', queueFit);
 fit();
-if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
 addEventListener('load', fit);
+if (document.fonts && document.fonts.check) {
+  let tries = 0;
+  const pollFit = () => {
+    tries++;
+    if (document.fonts.check('800 16px Archivo')) { fit(); return; }
+    if (tries < 40) setTimeout(pollFit, 100);
+  };
+  pollFit();
+} else {
+  [300, 800, 1600].forEach(ms => setTimeout(fit, ms));
+}
 
 /* Hero + contact posters: reveal when in view (hero immediately) */
 const reveal = el => el.classList.add('in');
