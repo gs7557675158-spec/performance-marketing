@@ -39,7 +39,7 @@ const CASES = [
   { id:'neelkamal', mono:'NS', title:'Neelkamal Sleep', industry:null, ag:'fi', tags:['Lead Generation','Paid Acquisition'], metrics:[{label:'Cost per lead (approx., varies by budget)', value:'₹150–230'}], images:['yogesh-logos/nilkamal.jpg'] },
   { id:'modern', mono:'MS', title:'The Modern School and Hostel', industry:'Education', ag:'uni', tags:['Lead Generation','Campaign Strategy'], images:['yogesh-logos/the-modern-school-sector-85-faridabad.png'] },
   { id:'tajurba', mono:'T', title:'Tajurba', sub:'Suresh Mansharamani', industry:null, ag:'uni', tags:['Paid Acquisition','Campaign Strategy'], images:['yogesh-logos/tajurba.jpg'] },
-  { id:'kk', mono:'KK', title:'KK Dental', industry:'Dental', ag:'uni', tags:['Lead Generation','Paid Acquisition'] },
+  { id:'kk', mono:'KK', title:'KK Dental', industry:'Dental', ag:'uni', tags:['Lead Generation','Paid Acquisition'], images:['yogesh-logos/kk-dental-dr-suniti-goel.jpg'] },
   { id:'ritas', mono:'R', title:"Rita's Drink UAE", industry:null, intl:true, ag:'uni', tags:['Sales Campaigns','Paid Acquisition'], images:['yogesh-logos/rita.jpg'] },
   { id:'sci', mono:'SCI', title:'SCI International Hospital', industry:'Healthcare', ag:'dig', tags:['Lead Generation','Paid Acquisition'], images:['yogesh-logos/sci-international-hospital.jpg'] },
   { id:'sight', mono:'SA', title:'The Sight Avenue', industry:null, ag:'dig', tags:['Conversion Campaigns','Paid Acquisition'], images:['yogesh-logos/the-sight-avenue.jpg'] },
