@@ -46,7 +46,7 @@ h2{font-size:clamp(2rem,5vw,3.4rem);font-weight:800;margin-bottom:14px}
 .ltrack{display:flex;gap:14px;padding:4px 0;cursor:grab;touch-action:pan-y;-webkit-user-select:none;user-select:none;will-change:transform;transform-style:preserve-3d}
 .ltrack.dragging{cursor:grabbing}
 .ltile{flex:none;width:var(--ltile-w,300px);aspect-ratio:3/4;background:#fff;border-radius:18px;box-shadow:0 2px 14px rgba(20,18,43,.1);display:grid;place-items:center;padding:16px;box-sizing:border-box;overflow:hidden}
-.ltile img{max-width:100%;max-height:100%;object-fit:contain;pointer-events:none}
+.ltile img{display:block;width:100%;height:100%;object-fit:contain;pointer-events:none}
 .three{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
 .box{border:2px solid var(--ink);border-radius:24px;padding:30px;background:var(--w);display:flex;flex-direction:column;gap:12px;align-items:flex-start}
 .box .ico{font-size:2.4rem}.box h3{font-size:1.5rem}
@@ -239,7 +239,7 @@ CLIENTS.forEach(function(cl){
 var tile=document.createElement('div');
 tile.className='ltile';
 var img=document.createElement('img');
-img.src=cl.l;img.alt=cl.n;img.loading='lazy';img.width=200;img.height=260;
+img.src=cl.l;img.alt=cl.n;img.loading='lazy';
 tile.appendChild(img);
 frag.appendChild(tile);
 });
