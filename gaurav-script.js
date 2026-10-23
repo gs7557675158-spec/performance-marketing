@@ -20,7 +20,7 @@ const CASES = [
     platform:'Google Ads, Meta Ads', objective:"Build demand for luxury kids' room projects starting from ₹10 lakh.",
     strategy:'Manage both Google and Meta campaigns end to end for a high-ticket, considered-purchase category.',
     execution:'Ongoing account management across both platforms for about a year.',
-    tags:['Google Ads','Meta Ads','Luxury'], metrics:[{label:'Project scope', value:'From ₹10L+'}], images:['logos/miffys-mansion.png'] },
+    tags:['Google Ads','Meta Ads','Luxury'], metrics:[{label:'CPL', value:'₹232'},{label:'Qualified leads', value:'47%'},{label:'CPA', value:'₹40,000'},{label:'Revenue, this deal', value:'₹10,00,000'},{label:'ROAS', value:'25x'},{label:'ROI', value:'24x'}], images:['logos/miffys-mansion.png'] },
   { id:'salmon', mono:'SS', title:'Salmon Stretch', industry:'Fashion & Apparel',
     agency:'Direct client', period:'Ongoing', role:'Paid Advertising (account turnaround)',
     platform:'Meta Ads', objective:'Turn around an ad account stuck at 1–3 orders a month after a previous agency and freelancer.',
