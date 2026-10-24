@@ -188,8 +188,6 @@ let vT; addEventListener('resize', () => { clearTimeout(vT); vT = setTimeout(bui
 /* ============================================================
    COUNTERS + LEDGER
    ============================================================ */
-const allCounters = $$('[data-count]');
-allCounters.forEach(c => { c.textContent = '0'; });
 function count(el) {
   const to = +el.dataset.count;
   if (reduce) { el.textContent = to; return; }
@@ -267,13 +265,13 @@ function render(i) {
   const c = CASES[cur];
   $('#mCount').textContent = `Case file ${cur + 1} of ${CASES.length}`;
   const client = c.company === null ? 'Multiple clients (see individual case files below)' : c.title + (c.sub ? ` (${c.sub})` : '');
-  const ind = c.industry ? c.industry : ph('Add industry');
+  const ind = c.industry || '';
   const mets = (c.metrics && c.metrics.length)
     ? `<div class="mets">${c.metrics.map(m => `<div class="met real"><span>${m.label}</span><b>${m.value}</b></div>`).join('')}</div>`
     : `<div class="mets"><div class="met"><span>Add a verified metric</span><b>–</b></div><div class="met"><span>Add a verified metric</span><b>–</b></div><div class="met"><span>Add a verified metric</span><b>–</b></div></div>`;
   mBody.innerHTML = `<h3 id="mTitle">${c.title}</h3><p class="role">${c.role}, ${c.agency}. ${c.period}.</p>
     <dl class="cs">
-      <div><dt>Client and industry</dt><dd>${c.feat ? client : (c.sub ? c.title + ' (' + c.sub + ')' : c.title)}, ${ind}${c.intl ? '. International client.' : ''}</dd></div>
+      <div><dt>Client${ind ? ' and industry' : ''}</dt><dd>${c.feat ? client : (c.sub ? c.title + ' (' + c.sub + ')' : c.title)}${ind ? ', ' + ind : ''}${c.intl ? '. International client.' : ''}</dd></div>
       <div><dt>Platform</dt><dd>${c.platform}</dd></div>
       <div><dt>Objective</dt><dd>${c.objective}</dd></div>
       <div><dt>Strategy</dt><dd>${c.strategy}</dd></div>
