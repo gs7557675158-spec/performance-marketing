@@ -324,8 +324,6 @@ let vT; addEventListener('resize', () => { clearTimeout(vT); vT = setTimeout(bui
 /* ============================================================
    COUNTERS + LEDGER
    ============================================================ */
-const allCounters = $$('[data-count]');
-allCounters.forEach(c => { c.textContent = '0'; });
 function count(el) {
   const to = +el.dataset.count;
   if (reduce) { el.textContent = to; return; }
