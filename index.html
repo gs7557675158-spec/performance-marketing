@@ -240,10 +240,34 @@ nav ul{position:absolute;top:100%;left:0;right:0;background:var(--ink);flex-dire
 <section id="contact"><div class="wrap"><div class="cwrap">
 <div class="ctext"><h2>Ready to <em>aim higher?</em></h2><p class="lead">Tell us about your project. We reply within one working day.</p>
 <div class="askcard"><span class="av"><img src="akshara-avatar.jpg" width="300" height="300" alt="Akshara Singh, Freelance Brand Manager" loading="lazy"></span><h3>Not sure where to start?</h3><p>Talk to Akshara. She will help you work out what you need, and bring in the complete team if your project calls for it.</p><a class="btn" style="background:var(--sun)" href="https://wa.me/919927602553?text=Hi%20Akshara%2C%20I%27m%20not%20sure%20where%20to%20start%20with%20my%20project." target="_blank" rel="noopener">Talk to Akshara</a></div></div>
-<form action="mailto:akshara31singh@gmail.com" method="post" enctype="text/plain">
+<form id="leadform" action="mailto:akshara31singh@gmail.com" method="post" enctype="text/plain">
 <div class="frow"><label>Name<input name="name" placeholder="Your name" required></label><label>Phone number<input type="tel" name="phone" placeholder="+91 98765 43210"></label></div>
 <div class="frow"><label>Email<input type="email" name="email" placeholder="name@company.com" required></label><label>What do you need?<select name="need"><option>Performance marketing</option><option>Brand and social strategy</option><option>SEO and website</option><option>Full growth team</option><option>Not sure yet</option></select></label></div>
-<label>Project details<textarea name="details" rows="4" placeholder="Tell us your goal, budget range and timeline"></textarea></label><button class="btn" type="submit">Send request</button></form></div></div></section>
+<label>Project details<textarea name="details" rows="4" placeholder="Tell us your goal, budget range and timeline"></textarea></label><button class="btn" type="submit">Send request</button><p id="leadform-status" role="status" style="margin-top:10px;font-weight:600"></p></form></div></div></section>
+<script>
+(function(){
+  var form = document.getElementById('leadform');
+  var status = document.getElementById('leadform-status');
+  var endpoint = 'https://script.google.com/macros/s/AKfycbzT__66X2mDvfwg8HCaFlByIcXhHT5hy0iRJ2wsI7XL-CZ4_a4fCYoqhzQRVVbMkAYy1w/exec';
+  if (!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    status.textContent = 'Sending...';
+    var data = new FormData(form);
+    fetch(endpoint, { method: 'POST', mode: 'no-cors', body: data })
+      .then(function(){
+        status.textContent = "Thanks! We'll be in touch within one working day.";
+        form.reset();
+      })
+      .catch(function(){
+        status.textContent = 'Something went wrong. Please email akshara31singh@gmail.com directly.';
+      })
+      .finally(function(){ btn.disabled = false; });
+  });
+})();
+</script>
 
 <footer><div class="wrap fgrid"><div class="fcard"><img class="fimg" src="home-art/polka-dot-guy.webp" width="320" height="480" loading="lazy" alt="Cartoon character waving hello"><span class="hi">Say Hi!</span></div><div class="fmsg"><span class="fb">Bas bhai, yahin tak tha!</span><span class="fb f2">Ab kaam ki baat karein? 😎</span></div>
 <ul class="flinks"><li><a href="#top">Home</a></li><li><a href="#work">Our Work</a></li><li><a href="#results">Results</a></li><li><a href="#team">Our Team</a></li><li><a href="#contact">Contact Us</a></li><li><a href="#">Privacy Policy</a></li></ul></div>
