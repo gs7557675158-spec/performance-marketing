@@ -278,13 +278,13 @@ nav ul{position:absolute;top:100%;left:0;right:0;background:var(--ink);flex-dire
     var data = new FormData(form);
     fetch(endpoint, { method: 'POST', mode: 'no-cors', body: data })
       .then(function(){
-        status.textContent = "Thanks! We'll be in touch within one working day.";
         form.reset();
+        window.location.href = 'thankyou.html';
       })
       .catch(function(){
         status.textContent = 'Something went wrong. Please email akshara31singh@gmail.com directly.';
-      })
-      .finally(function(){ btn.disabled = false; });
+        btn.disabled = false;
+      });
   });
 })();
 </script>
