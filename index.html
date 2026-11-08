@@ -239,7 +239,7 @@ nav ul{position:absolute;top:100%;left:0;right:0;background:var(--ink);flex-dire
 
 <section id="contact"><div class="wrap"><div class="cwrap">
 <div class="ctext"><h2>Ready to <em>aim higher?</em></h2><p class="lead">Tell us about your project. We reply within one working day.</p>
-<div class="askcard"><span class="av"><img src="akshara-avatar.jpg" width="300" height="300" alt="Akshara Singh, Freelance Brand Manager" loading="lazy"></span><h3>Not sure where to start?</h3><p>Talk to Akshara. She will help you work out what you need, and bring in the complete team if your project calls for it.</p><a class="btn" style="background:var(--sun)" href="https://wa.me/919927602553?text=Hi%20Akshara%2C%20I%27m%20not%20sure%20where%20to%20start%20with%20my%20project." target="_blank" rel="noopener">Talk to Akshara</a></div></div>
+<div class="askcard"><span class="av"><img src="akshara-avatar.jpg" width="300" height="300" alt="Akshara Singh, Freelance Brand Manager" loading="lazy"></span><h3>Not sure where to start?</h3><p>Talk to Akshara. She will help you work out what you need, and bring in the complete team if your project calls for it.</p><a class="btn" id="talk-to-akshara-btn" style="background:var(--sun)" href="https://wa.me/919927602553?text=Hi%20Akshara%2C%20I%27m%20not%20sure%20where%20to%20start%20with%20my%20project." target="_blank" rel="noopener">Talk to Akshara</a></div></div>
 <form id="leadform" action="mailto:akshara31singh@gmail.com" method="post" enctype="text/plain">
 <div class="frow"><label>Name<input name="name" placeholder="Your name" required></label><label>WhatsApp number<input type="tel" inputmode="numeric" id="leadform-phone" name="phone" placeholder="+91 98765 43210"><span id="leadform-phone-error" style="display:block;color:#c0152f;font-size:.85rem;font-weight:600;margin-top:4px"></span></label></div>
 <div class="frow"><label>Email<input type="email" name="email" placeholder="name@company.com" required></label><label>What do you need?<select name="need"><option>Performance marketing</option><option>Brand and social strategy</option><option>SEO and website</option><option>Full growth team</option><option>Not sure yet</option></select></label></div>
@@ -286,6 +286,13 @@ nav ul{position:absolute;top:100%;left:0;right:0;background:var(--ink);flex-dire
         btn.disabled = false;
       });
   });
+
+  var talkToAkshara = document.getElementById('talk-to-akshara-btn');
+  if (talkToAkshara) {
+    talkToAkshara.addEventListener('click', function(){
+      if (typeof gtag === 'function') gtag('event', 'generate_lead', { event_category: 'lead', event_label: 'talk_to_akshara_home' });
+    });
+  }
 })();
 </script>
 

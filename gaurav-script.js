@@ -479,6 +479,9 @@ $$('[data-whatsapp]').forEach(a => {
   a.href = `https://wa.me/91${CONFIG.phone}?text=${encodeURIComponent("Hi Gaurav, I'd like to talk about performance marketing.")}`;
   a.target = '_blank';
   a.rel = 'noopener';
+  a.addEventListener('click', () => {
+    if (typeof gtag === 'function') gtag('event', 'generate_lead', { event_category: 'lead', event_label: 'whatsapp_gaurav' });
+  });
 });
 
 $$('[data-contact]').forEach(a => {
